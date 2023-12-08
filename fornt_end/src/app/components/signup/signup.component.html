@@ -1,0 +1,42 @@
+
+<div class="container">
+  <br>
+  <div class="row">
+      <div class="col mt-5 nb-5">
+          <div class="col-md-8 mx-auto">
+          
+              <div class="col-8">
+                  <div class ="card">
+                      <div class="card-header">
+                          Signup here
+                      </div>
+                      <div class="card-body">
+                          <form  (ngSubmit)="addeemployee()">
+                              <div class="from-group">
+                                  <label for="name">name</label>
+                                  <input type="text" name="name" class="test form-control" [(ngModel)]="employee.name">
+                                </div>
+                              <div class="from-group">
+                                  <label for="email">email</label>
+                                  <input type="email" name="email"class="test form-control"[(ngModel)]="employee.email">
+                                </div>
+                              <div class="from-group">
+                                  <label for="phone">phone number</label>
+                                  <input type="text" name="phone"class="test form-control"[(ngModel)]="employee.phone">
+                                </div>
+                              <div class="from-group">
+                                  <label for="description">description</label>
+                                  <input type="text" name="description"class="test form-control"[(ngModel)]="employee.description">
+                                </div>
+                  
+                                <button type="submit" class="btn btn-dark" [disabled]="isValidEmployee()">next</button>
+                                &nbsp;
+                              <button type="submit" class="btn btn-dark" [routerLink]="['/']">back</button>
+                          </form>
+                      </div>
+                  </div>
+              </div>
+            </div>
+            </div>
+          </div>
+      </div>

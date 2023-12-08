@@ -1,0 +1,33 @@
+
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col mt-5 nb-5">
+            <div class="col-md-8 mx-auto">
+            
+                <div class="col-8">
+                    <div class ="card">
+                        <div class="card-header">
+                            login here
+                        </div>
+                        <div class="card-body">
+                            <form #loginForm="ngForm" (ngSubmit)="Submitlogin()">
+                                <div class="mb-3">
+                                <label for="email" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="email" name="email" [(ngModel)]="from.email" >
+                                </div>
+                                <div class="mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" name="password" [(ngModel)]="from.password">
+                                </div>
+                                <button type="submit" class="btn btn-dark"  [disabled]="verif()" >Submit</button>
+                                &nbsp;
+                                <button type="submit" class="btn btn-dark" (click)="playAudio()">Signup</button>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>

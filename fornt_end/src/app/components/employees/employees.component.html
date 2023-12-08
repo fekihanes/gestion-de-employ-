@@ -1,0 +1,35 @@
+<app-navbar></app-navbar>
+<br>
+<div class="container">
+    <br>
+    <div class="row">
+        <div class="col mt-5 nb-5">
+            <div class="col-md-8 mx-auto">
+            </div>
+                <table class ="table" >
+                    <thead>
+                        <tr>
+                            <th scope="col" headers="100%">name</th>
+                            <th scope="col">email</th>
+                            <th scope="col">phone number</th>
+                            <th scope="col" >description</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td scope="row">{{ employee.name }}</td>
+                            <td scope="row">{{ employee.email }}</td>
+                            <td scope="row">{{ employee.phone }}</td>
+                            <td scope="row">{{ employee.description }}</td>
+                            <td>
+                            <button class="btn btn-danger btn-sm" (click)="deletedata(id)">delete</button>
+                            &nbsp;
+                            <button class="btn btn-warning btn-sm" [routerLink]="['/edit',id]">edit</button>
+                            </td>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
